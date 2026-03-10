@@ -1,0 +1,198 @@
+.orders-page {
+  padding: 39px 20px 60px;
+  min-height: calc(100vh - 158px);
+}
+
+.orders-page__title {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.21;
+  color: #000;
+  margin: 0 0 36px;
+}
+
+.orders-page__loading,
+.orders-page__error,
+.orders-page__empty {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.orders-page__loading,
+.orders-page__empty {
+  color: #666;
+}
+
+.orders-page__error {
+  color: #c00;
+  margin-bottom: 16px;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.orders-card {
+  background: #e6e6e6;
+  border-radius: 25px;
+  box-shadow: 0 4px 4px 5px rgba(0, 0, 0, 0.25);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.orders-card__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.orders-card__main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.orders-card__id {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+.orders-card__date {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  color: #666;
+}
+
+.orders-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.orders-card__status {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #50e311;
+  background: rgba(80, 227, 17, 0.15);
+  padding: 6px 12px;
+  border-radius: 12px;
+}
+
+.orders-card__total {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #56c4ff;
+}
+
+.orders-card__user,
+.orders-card__address {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.orders-card__label {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+.orders-card__value {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 18px;
+  color: #333;
+}
+
+.orders-card__email {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  color: #666;
+}
+
+.orders-card__toggle {
+  font-family: Montserrat, Inter, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #56c4ff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  align-self: flex-start;
+  text-decoration: underline;
+  transition: opacity 0.2s;
+}
+
+.orders-card__toggle:hover {
+  opacity: 0.8;
+}
+
+.orders-card__items {
+  margin-top: 8px;
+  overflow-x: auto;
+}
+
+.orders-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 15px;
+}
+
+.orders-items-table th,
+.orders-items-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.orders-items-table th {
+  font-weight: 600;
+  color: #000;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.orders-items-table td {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .orders-page__title {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+
+  .orders-card__header {
+    flex-direction: column;
+  }
+
+  .orders-items-table {
+    font-size: 14px;
+  }
+
+  .orders-items-table th,
+  .orders-items-table td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .orders-page__title {
+    font-size: 28px;
+  }
+}

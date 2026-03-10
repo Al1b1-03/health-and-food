@@ -1,0 +1,16 @@
+.app {
+  min-height: 100vh;
+  background: #FFFFFF;
+}
+
+.app__main {
+  flex: 1;
+}
+
+.admin-route-loading {
+  padding: 40px;
+  text-align: center;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 18px;
+  color: #666;
+}

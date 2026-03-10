@@ -1,0 +1,140 @@
+.users-page {
+  padding: 39px 20px 60px;
+  min-height: calc(100vh - 158px);
+}
+
+.users-page__title {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.21;
+  color: #000;
+  margin: 0 0 36px;
+}
+
+.users-page__loading,
+.users-page__error,
+.users-page__empty {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.users-page__loading,
+.users-page__empty {
+  color: #666;
+}
+
+.users-page__error {
+  color: #c00;
+  margin-bottom: 16px;
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 24px;
+}
+
+.users-card {
+  background: #e6e6e6;
+  border-radius: 25px;
+  box-shadow: 0 4px 4px 5px rgba(0, 0, 0, 0.25);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.users-card__field {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.users-card__label {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+}
+
+.users-card__value {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #56c4ff;
+}
+
+.users-card__status {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #50e311;
+  margin: 0;
+}
+
+.users-card__status--banned {
+  color: #ff0000;
+}
+
+.users-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.users-card__btn {
+  font-family: Montserrat, Inter, system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.users-card__btn:hover:not(:disabled) {
+  opacity: 0.95;
+}
+
+.users-card__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.users-card__btn--ban {
+  background: #ea580c;
+  color: #fff;
+}
+
+.users-card__btn--delete {
+  background: #dc2626;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .users-page__title {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+
+  .users-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .users-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .users-page__title {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,275 @@
+.workouts-page {
+  padding: 39px 20px 60px;
+  min-height: calc(100vh - 158px);
+}
+
+.workouts-page__title {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.21;
+  color: #000;
+  margin: 0 0 36px;
+}
+
+.workouts-page__loading {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 18px;
+  color: #666;
+  margin: 0 0 20px;
+}
+
+.workouts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.workout-card {
+  background: #e6e6e6;
+  border-radius: 25px;
+  box-shadow: 0 4px 4px 5px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.workout-card__image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, #61c8ff 0%, #7b00ff 50%, #ff46af 100%);
+  overflow: hidden;
+}
+
+.workout-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.workout-card__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+.workout-card__content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.workout-card__name {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.workout-card__desc {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.workout-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.workout-card__meta-item {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  color: #56c4ff;
+  font-weight: 500;
+}
+
+.workout-card__btn {
+  margin-top: auto;
+  padding: 12px 20px;
+  font-family: Montserrat, Inter, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background: #7B00FF;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.workout-card__btn:hover {
+  opacity: 0.95;
+}
+
+/* Modal */
+.workout-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: workout-modal-fade 0.2s ease;
+}
+
+@keyframes workout-modal-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.workout-modal__content {
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  max-width: 560px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 32px;
+  position: relative;
+  animation: workout-modal-slide 0.3s ease;
+}
+
+@keyframes workout-modal-slide {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.workout-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  font-size: 28px;
+  line-height: 1;
+  color: #666;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s;
+}
+
+.workout-modal__close:hover {
+  background: #e6e6e6;
+  color: #000;
+}
+
+.workout-modal__title {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 16px;
+  padding-right: 40px;
+}
+
+.workout-modal__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  color: #56c4ff;
+  font-weight: 500;
+}
+
+.workout-modal__desc {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+
+.workout-modal__exercises-title {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 16px;
+}
+
+.workout-modal__exercises {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.workout-modal__exercise {
+  background: #e6e6e6;
+  border-radius: 15px;
+  padding: 16px;
+}
+
+.workout-modal__exercise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.workout-modal__exercise-name {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.workout-modal__exercise-sets {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  color: #7b00ff;
+  font-weight: 500;
+}
+
+.workout-modal__exercise-rest {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .workouts-page__title {
+    font-size: 36px;
+  }
+
+  .workouts-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+
+  .workout-modal__content {
+    padding: 24px;
+  }
+
+  .workout-modal__title {
+    font-size: 24px;
+  }
+}
